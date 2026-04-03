@@ -469,7 +469,10 @@ select, input, textarea { font: inherit; }
 
 /* Giant wordmark */
 .footer__wordmark {
-  width: 100%;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -478,7 +481,7 @@ select, input, textarea { font: inherit; }
 }
 
 .footer__wordmark-img {
-  width: 80%;
+  width: 100%;
   max-width: 900px;
   height: auto;
   object-fit: contain;
