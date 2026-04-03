@@ -475,7 +475,7 @@ select, input, textarea { font: inherit; }
   line-height: 0.85;
   letter-spacing: -0.02em;
   color: var(--white);
-  text-align: left;
+  text-align: centre;
   white-space: nowrap;
   margin-left: -0.03em; /* optical alignment */
   user-select: none;
