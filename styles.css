@@ -468,25 +468,19 @@ select, input, textarea { font: inherit; }
 }
 
 /* Giant wordmark */
-.footer__wordmark {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0 0;
-  overflow: hidden;
+.footer__wordmark-text {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(60px, 13vw, 180px);
+  letter-spacing: -0.02em;
+  line-height: 0.85;
+  color: var(--white);
+  white-space: nowrap;
 }
 
-.footer__wordmark-img {
-  width: 100vw;
-max-width: none;
-  height: auto;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-  display: block;
+.footer__wordmark-text sup {
+  font-size: 0.3em;
+  vertical-align: super;
 }
 
 
