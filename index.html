@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sevenstudios® — Faith-First Creative Studio</title>
+  <meta name="description" content="sevenstudios® is a faith-first creative agency for timeless strategy. Brand Strategy, Creative Systems, Brand Identity, Campaign Design, App & Web, Social Media." />
+
+  <!-- Fonts: Archivo (display/headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       LOADING SCREEN
+  ═══════════════════════════════════════ -->
+  <div id="loader" aria-hidden="true" role="presentation">
+    <div class="loader__inner">
+      <img
+        src="https://i.ibb.co/d39xwVm/image-12.png"
+        alt="sevenstudios®"
+        class="loader__logo"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+      />
+      <!-- Fallback text logo if image fails -->
+      <span class="loader__logo-fallback" style="display:none;">sevenstudios<sup>®</sup></span>
+      <div class="loader__bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="loader__bar-fill" id="loaderBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       MAIN APP
+  ═══════════════════════════════════════ -->
+  <main id="app" aria-hidden="true">
+
+    <!-- NAV -->
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="/" class="nav__logo" aria-label="sevenstudios home">
+        <img
+          src="https://i.ibb.co/d39xwVm/image-12.png"
+          alt="sevenstudios®"
+          class="nav__logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+        />
+        <span class="nav__logo-fallback" style="display:none;">sevenstudios<sup>®</sup></span>
+      </a>
+      <a href="mailto:INFO@THESEVENSTUDIO.CO.ZA" class="btn btn--outline nav__cta">GET IN TOUCH</a>
+    </nav>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="contact__grid">
+
+        <!-- LEFT COLUMN -->
+        <div class="contact__left">
+          <p class="label">CURRENTLY IN BUILD PHASE</p>
+          <h1 class="contact__heading" id="contact-heading">CONTACT</h1>
+          <p class="contact__mission">
+            We're currently in build phase. Leave your details and we'll get in touch.
+          </p>
+          <p class="contact__sub">
+            Our mission is to empower brands with timeless strategy and faith-driven creativity — the tools to build their digital presence more powerfully.
+          </p>
+          <a href="#form" class="btn btn--outline contact__btn">GET IN TOUCH</a>
+          <div class="contact__email-block">
+            <span class="label">EMAIL</span>
+            <a href="mailto:INFO@THESEVENSTUDIO.CO.ZA" class="contact__email">
+              INFO@THESEVENSTUDIO.CO.ZA
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN — FORM -->
+        <div class="contact__right" id="form">
+          <!-- Toast / success message -->
+          <div class="toast" id="toast" role="alert" aria-live="polite" aria-atomic="true">
+            <span class="toast__icon">✓</span>
+            <span class="toast__text">Message sent. We'll be in touch soon.</span>
+          </div>
+
+          <form
+            id="contactForm"
+            novalidate
+            aria-label="Contact form"
+          >
+            <!-- Name -->
+            <div class="field" id="field-name">
+              <label class="field__label" for="name">NAME</label>
+              <input
+                class="field__input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Jane Smith"
+                autocomplete="name"
+                required
+                data-fs-field
+                aria-required="true"
+                aria-describedby="error-name"
+              />
+              <span class="field__error" id="error-name" role="alert"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="field" id="field-email">
+              <label class="field__label" for="email">EMAIL</label>
+              <input
+                class="field__input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jane@studio.com"
+                autocomplete="email"
+                required
+                data-fs-field
+                aria-required="true"
+                aria-describedby="error-email"
+              />
+              <span class="field__error" id="error-email" role="alert"></span>
+            </div>
+
+            <!-- Service -->
+            <div class="field" id="field-service">
+              <label class="field__label" for="service">SERVICE</label>
+              <div class="field__select-wrap">
+                <select
+                  class="field__input field__select"
+                  id="service"
+                  name="service"
+                  required
+                  data-fs-field
+                  aria-required="true"
+                  aria-describedby="error-service"
+                >
+                  <option value="" disabled selected>Select...</option>
+                  <option value="Brand Strategy">Brand Strategy</option>
+                  <option value="Creative Systems">Creative Systems</option>
+                  <option value="Brand Identity">Brand Identity</option>
+                  <option value="Campaign Design">Campaign Design</option>
+                  <option value="App & Web">App &amp; Web</option>
+                  <option value="Social Media">Social Media</option>
+                </select>
+                <span class="field__select-arrow" aria-hidden="true">↓</span>
+              </div>
+              <span class="field__error" id="error-service" role="alert"></span>
+            </div>
+
+            <!-- Message -->
+            <div class="field" id="field-message">
+              <label class="field__label" for="message">MESSAGE / PROJECT DETAILS</label>
+              <textarea
+                class="field__input field__textarea"
+                id="message"
+                name="message"
+                placeholder="Tell us about your project..."
+                rows="4"
+                required
+                data-fs-field
+                aria-required="true"
+                aria-describedby="error-message"
+              ></textarea>
+              <span class="field__error" id="error-message" role="alert"></span>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn--solid btn--full"
+              id="submitBtn"
+              data-fs-submit-btn
+            >
+              <span class="btn__label">SUBMIT</span>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" aria-label="Site footer">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <p class="footer__heading">Quick Links</p>
+          <ul class="footer__list">
+            <li><a href="/" class="footer__link">Home</a></li>
+            <li><a href="#contact" class="footer__link">About</a></li>
+            <li><a href="#contact" class="footer__link">Work</a></li>
+            <li><a href="#contact" class="footer__link">Services</a></li>
+            <li><a href="#contact" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Social Media</p>
+          <ul class="footer__list">
+            <li><a href="https://www.instagram.com/thesevencollective" class="footer__link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/thesevenstudios" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.threads.com/@thesevencollective" class="footer__link" target="_blank" rel="noopener noreferrer">Threads</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Headquarters</p>
+          <ul class="footer__list">
+            <li><span class="footer__text">Cape Town, South Africa</span></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Support</p>
+          <ul class="footer__list">
+            <li><span class="footer__text">Mon – Friday 10am – 6pm</span></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__heading">Legal</p>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__link">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Wordmark -->
+      <div class="footer__wordmark" aria-hidden="true">sevenstudios<sup>®</sup></div>
+    </footer>
+
+  </main><!-- /#app -->
+
+  <script src="app.js"></script>
+</body>
+</html>
