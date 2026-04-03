@@ -481,7 +481,7 @@ select, input, textarea { font: inherit; }
 }
 
 .footer__wordmark-img {
-  width: 100%;
+  width: 150%;
   max-width: 900px;
   height: auto;
   object-fit: contain;
