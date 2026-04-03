@@ -469,7 +469,7 @@ select, input, textarea { font: inherit; }
 
 /* Giant wordmark */
 .footer__wordmark {
-  width: 100%;
+  width: 400%;
   display: flex;
   justify-content: center;
   align-items: center;
